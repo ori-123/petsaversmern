@@ -1,5 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Popup from "reactjs-popup";
+import AddInterest from "./AddInterest";
 
 function fetchDog(id) {
   return fetch(`http://localhost:3001/api/alldogs/${id}`).then((res) => res.json());
@@ -10,6 +12,7 @@ export default function Details() {
   const [dog, setDog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [openPopup, setOpenPopup] = useState(false);
 
   useEffect(() => {
     fetchDog(id)
@@ -33,7 +36,7 @@ export default function Details() {
     return <h1>LOADING DOG...</h1>;
   }
 
-  return(
+  return (
     <>
       <div className='background'></div>
       <div style={{ fontSize: '26px', color: 'white' }}>
@@ -43,7 +46,7 @@ export default function Details() {
           <button style={{ marginRight: '15px' }} onClick={handlePrev} disabled={currentIndex === 0}>Previous photo</button>
           <button onClick={handleNext} disabled={currentIndex === dog.photoUrl.length - 1}>Next photo</button>
         </div>
-        
+
         <div>
           Breed: {dog.breeds}<br></br>
           Colors: {dog.colors}<br></br>
@@ -56,9 +59,13 @@ export default function Details() {
             {dog.attributes.map(attribute => <li key={attribute}>{attribute}</li>)}
           </ul>
           Description: {dog.description}<br></br>
-          <Link to={`/interest/${dog._id}`}>
-            <button>I want this dog</button>
+          <button onClick={() => setOpenPopup(true)}>I want this dog</button>
+          <Link to={"/"}>
+            <button style={{ marginLeft: "10px" }}>Back</button>
           </Link>
+          <Popup open={openPopup} onClose={() => setOpenPopup(false)}>
+            <AddInterest onBack={() => setOpenPopup(false)} />
+          </Popup>
         </div>
       </div>
     </>

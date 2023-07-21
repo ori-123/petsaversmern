@@ -21,23 +21,27 @@ export default function Interests() {
 
     return (
         <>
-            {interests.map(interest => (
-                <div key={interest._id}>
-                    <div className="background"></div>
-                    <ul>
-                        <div><h2>Name: {interest.name}</h2></div>
-                        <p>Address: {interest.address}</p>
-                        <p>Phone: {interest.phone}</p>
-                        <p>Email: {interest.email}</p>
-                        <p>About the person: {interest.aboutme}</p>
-                        <p>Message: {interest.message}</p>
-                        <p>Inquired dog: {interest.dog}</p>
-                    </ul>
-                    <Link to={"/admin"}>
-                        <button>Back</button>
-                    </Link>
-                </div>
-            ))}
+            <div className="interestPageBody">
+                <Link to={"/admin"}>
+                    <button>Back</button>
+                </Link>
+                <div className="background"></div>
+                {interests.map(interest => (
+                    <div key={interest._id}>
+                        <ul>
+                            <div className="interestsBox">
+                                <h2>Name: {interest.name}</h2>
+                                <p>Address: {interest.address}</p>
+                                <p>Phone: {interest.phone}</p>
+                                <p>Email: {interest.email}</p>
+                                <p>About the person: {interest.aboutme}</p>
+                                <p>Message: {interest.message}</p>
+                                <p>Inquired dog: {interest.dog}</p>
+                            </div>
+                        </ul>
+                    </div>
+                ))}
+            </div>
         </>
     );
 }

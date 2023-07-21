@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const addInterestToDB = (interest) => {
     return fetch(`http://localhost:3001/api/interests`, {
@@ -8,7 +8,7 @@ const addInterestToDB = (interest) => {
     });
 };
 
-const AddInterest = () => {
+const AddInterest = ({ onBack }) => {
     const { id } = useParams();
 
     const handleSubmit = (e) => {
@@ -57,10 +57,8 @@ const AddInterest = () => {
                         <textarea id="message" name="message"></textarea>
                     </div>
                 </div>
-                <button className="saveButton" type="submit">Save Dog</button>
-                <Link to={`/dogdetails/${id}`}>
-                    <button className="closeButton" type='button'>Close</button>
-                </Link>
+                <button className="saveButton" type="submit" onClick={onBack}>Submit</button>
+                <button className="closeButton" type='button' onClick={onBack}>Close</button>
             </form>
         </div>
     );

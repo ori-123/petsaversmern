@@ -277,6 +277,23 @@ textarea {
   background-color: rgb(214, 4, 4);
 }
 
+.interestsBox {
+  /* display: flex;
+  justify-content: space-evenly;
+  flex-direction: column; */
+  background: rgba(247, 247, 247, 0.5);
+  padding: 10px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border: transparent;
+  border-radius: 10px;
+  width: 95%;
+}
+
+.interestPageBody {
+  text-align: center;
+}
 
 /* .form-box {
   max-width: 500px;

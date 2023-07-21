@@ -39,7 +39,7 @@ export default function Details() {
   return (
     <>
       <div className='background'></div>
-      <div style={{ fontSize: '26px', color: 'white' }}>
+      <div style={{ fontSize: '26px', color: 'white', display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
         <h1>{dog.name}</h1>
         <div>
           <img src={dog.photoUrl[currentIndex]} style={{ maxHeight: '450px', maxWidth: '450px', marginLeft: '10px', marginRight: '10px' }}></img><br></br>

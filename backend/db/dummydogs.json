@@ -1,0 +1,68 @@
+[
+    {
+      "name": "Buddy",
+      "breeds": ["Labrador Retriever"],
+      "color": "Golden",
+      "age": 3,
+      "gender": "Male",
+      "size": "Large",
+      "houseTrained": true,
+      "description": "Friendly and energetic Labrador.",
+      "neutered": true,
+      "photoUrl": "https://i.imgur.com/SnVIpBf.jpeg",
+      "adoptable": true
+    },
+    {
+      "name": "Daisy",
+      "breeds": ["Beagle", "Pug"],
+      "color": "Brown and White",
+      "age": 2,
+      "gender": "Female",
+      "size": "Small",
+      "houseTrained": false,
+      "description": "Playful Beagle-Pug mix looking for a loving home.",
+      "neutered": false,
+      "photoUrl": "https://i.imgur.com/YQ0bSH5.jpeg",
+      "adoptable": true
+    },
+    {
+      "name": "Gus",
+      "breeds": ["Dachshund"],
+      "color": "Brown",
+      "age": 0.4,
+      "gender": "Male",
+      "size": "Small",
+      "houseTrained": false,
+      "description": "Very small and even cuter.",
+      "neutered": true,
+      "photoUrl": "https://i.imgur.com/7YQlzZc.jpeg",
+      "adoptable": false
+    },
+    {
+      "name": "Philip",
+      "breeds": ["German shephard mix"],
+      "color": "Brown and black",
+      "age": 1,
+      "gender": "Male",
+      "size": "Medium",
+      "houseTrained": false,
+      "description": "A handful, but well worth it. Look at those ears!",
+      "neutered": true,
+      "photoUrl": "https://i.imgur.com/Km0ZqpW.jpeg",
+      "adoptable": true
+    },
+    {
+      "name": "Joey",
+      "breeds": ["Who knows..."],
+      "color": "Brown, white",
+      "age": 2,
+      "gender": "Male",
+      "size": "Small",
+      "houseTrained": false,
+      "description": "Found wandering in a wooded area. Not much information available, but very friendly.",
+      "neutered": false,
+      "photoUrl": "https://i.imgur.com/SSlfK45.jpeg",
+      "adoptable": true
+    }
+  ]
+  

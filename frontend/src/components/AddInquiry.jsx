@@ -8,22 +8,16 @@ const addInquiryToDB = (inquiry) => {
     });
 };
 
+// eslint-disable-next-line react/prop-types
 const AddInquiry = ({ onBack }) => {
     const { id } = useParams();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const formData = new FormData(e.target);
-        const entries = [...formData.entries()];
-
-        const inquiry = entries.reduce((acc, entry) => {
-            const [k, v] = entry;
-            acc[k] = v;
-            return acc;
-        }, {});
-
+        const inquiry = Object.fromEntries(formData);
         inquiry.dog = id;
-        addInquiryToDB(inquiry, id);
+        addInquiryToDB(inquiry);
     };
 
     return (

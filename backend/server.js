@@ -40,7 +40,7 @@ async function startServer() {
 
     app.delete('/api/alldogs/:id', async (req, res) => {
       const dogId = req.params.id;
-      const deletedDog = await Dog.findByIdAndRemove(dogId);
+      const deletedDog = await Dog.findByIdAndDelete(dogId);
       if (!deletedDog) {
         return res.status(404).json({ message: 'Dog not found' });
       }

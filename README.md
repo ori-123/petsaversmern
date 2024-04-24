@@ -36,6 +36,7 @@ on startup.
 
 <h3 id="built-with">Built With</h3>
 
+* [![Javascript][Javascript]][Javascript-url]
 * [![React][React.js]][React-url]
 * [![Express][Express.js]][Express-url]
 * [![MongoDB][MongoDB]][Mongo-url]
@@ -94,6 +95,8 @@ If you have a suggestion that would make this application better, please fork th
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[Javascript]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+[Javascript-url]: https://www.javascript.com/
 [Express.js]: https://img.shields.io/badge/Express.js-404D59?style=for-the-badge
 [Express-url]: https://expressjs.com/
 [MongoDB]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white

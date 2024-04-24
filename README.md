@@ -30,6 +30,8 @@ npm i
 npm run dev
 ```
 
+The default "/" route is the public page, use "/admin" for employee mode.
+
 ### Prerequisites
 
 * npm
